@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeModule } from './home/home.module';
+import { StoreModule } from '@ngrx/store';
+import { PostsReducer } from './store/reducers/posts.reducer'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { HomeModule } from './home/home.module';
     NavigationComponent
   ],
   imports: [
-    BrowserModule,
+
+    BrowserModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -28,7 +31,8 @@ import { HomeModule } from './home/home.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    HomeModule
+    HomeModule,
+    StoreModule.forRoot({ posts: PostsReducer }, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

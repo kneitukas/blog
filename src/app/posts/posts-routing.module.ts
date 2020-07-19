@@ -5,8 +5,10 @@ import { PostsComponent } from './posts.component';
 import { NewPostComponent } from './pages/new-post/new-post.component';
 
 const routes: Routes = [
-  { path: '', component: PostsComponent },
+  { path: '', component: PostsComponent  },
   { path: 'new', component: NewPostComponent }
+
+ 
 ];
 
 @NgModule({
