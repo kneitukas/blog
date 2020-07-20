@@ -1,1 +1,20 @@
-<p>new-post works!</p>
+<!-- TODO dynamicaly change create/edit post -->
+<h2>New Post</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+  <mat-form-field appearance='outline'>
+    <mat-label>Date</mat-label>
+    <input matInput formControlName="date" type="text">      
+</mat-form-field>
+<mat-form-field appearance='outline'>
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" type="text">      
+</mat-form-field>
+<mat-form-field appearance='outline'>
+    <mat-label>Text</mat-label>
+
+    <textarea CdkTextareaAutosize matInput formControlName="text" type="text"> </textarea>  
+</mat-form-field>
+
+<button mat-raised-button type="submit">Submit</button>
+</form> 

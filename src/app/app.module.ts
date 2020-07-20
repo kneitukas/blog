@@ -5,15 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { HomeModule } from './home/home.module';
 import { StoreModule } from '@ngrx/store';
-import { PostsReducer } from './store/reducers/posts.reducer'
+import { PostsReducer } from './store/reducers/posts.reducer';
+import { MaterialModule } from './shared/material/material.module'
 
 @NgModule({
   declarations: [
@@ -24,15 +19,10 @@ import { PostsReducer } from './store/reducers/posts.reducer'
 
     BrowserModule, 
     AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
+    BrowserAnimationsModule, 
     HomeModule,
-    StoreModule.forRoot({ posts: PostsReducer }, {})
+    StoreModule.forRoot({ posts: PostsReducer }, {}),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

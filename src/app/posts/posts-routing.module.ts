@@ -6,7 +6,8 @@ import { NewPostComponent } from './pages/new-post/new-post.component';
 
 const routes: Routes = [
   { path: '', component: PostsComponent  },
-  { path: 'new', component: NewPostComponent }
+  { path: 'new', component: NewPostComponent },
+  { path: 'edit/:postId', component: NewPostComponent }
 
  
 ];
