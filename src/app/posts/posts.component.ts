@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './models/post.model'
 import { Store } from '@ngrx/store';
 import { AppState } from '../store/models/app-state.model'
 

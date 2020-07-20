@@ -9,6 +9,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -16,18 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+  imports: [],
   exports: [
     LayoutModule,
     MatToolbarModule,
@@ -37,7 +30,10 @@ import {MatInputModule} from '@angular/material/input';
     MatListModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }

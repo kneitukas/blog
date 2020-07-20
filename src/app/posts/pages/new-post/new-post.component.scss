@@ -4,10 +4,18 @@ h2 {
 }
 
 form {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
 }
 
 mat-form-field {
     width: 100%;
+}
+
+.dateInput {
+    cursor: pointer;
+
+    input {
+        cursor: pointer;
+    }
 }

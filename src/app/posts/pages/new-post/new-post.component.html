@@ -1,20 +1,23 @@
 <!-- TODO dynamicaly change create/edit post -->
 <h2>New Post</h2>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()" >
-  <mat-form-field appearance='outline'>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="dateInput" (click)='picker1.open()' appearance="outline">
     <mat-label>Date</mat-label>
-    <input matInput formControlName="date" type="text">      
-</mat-form-field>
-<mat-form-field appearance='outline'>
+    <input   readonly matInput formControlName="date" [matDatepicker]="picker1" />
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker1></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Title</mat-label>
-    <input matInput formControlName="title" type="text">      
-</mat-form-field>
-<mat-form-field appearance='outline'>
+    <input matInput formControlName="title" type="text" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Text</mat-label>
 
-    <textarea CdkTextareaAutosize matInput formControlName="text" type="text"> </textarea>  
-</mat-form-field>
+    <textarea CdkTextareaAutosize matInput formControlName="text" type="text">
+    </textarea>
+  </mat-form-field>
 
-<button mat-raised-button type="submit">Submit</button>
-</form> 
+  <button mat-raised-button type="submit">Submit</button>
+</form>
