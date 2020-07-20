@@ -1,6 +1,10 @@
+import { PostSandbox } from './services/post.sandbox';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../store/models/app-state.model'
+import { Observable } from 'rxjs';
+import { Post } from '../store/models/post.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
@@ -9,11 +13,16 @@ import { AppState } from '../store/models/app-state.model'
 })
 export class PostsComponent implements OnInit {
 
-  posts: any;
-  constructor(private store: Store<AppState>) { }
+  posts$: Observable<Post[]>;
+  constructor(private sandbox: PostSandbox, private router: Router) { }
 
   ngOnInit(): void {
-   this.posts =  this.store.select( store => store.posts)
+   this.posts$ = this.sandbox.posts$
+  }
+
+  openPost(post, i) {
+    console.log(post)
+    this.router.navigateByUrl(`/posts/list/${i}`, {state: post})
   }
 
 }

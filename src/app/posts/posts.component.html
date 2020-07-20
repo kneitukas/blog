@@ -1,7 +1,7 @@
 <h2>List of Posts</h2>
 
 <div class="container">
-    <mat-card *ngFor="let post of posts | async">
+    <mat-card (click)='openPost(post, i)' *ngFor="let post of posts$ | async; let i = index">
         <mat-card-title>
             {{post.title}}
         </mat-card-title>
