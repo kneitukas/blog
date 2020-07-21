@@ -1,7 +1,5 @@
 import { PostSandbox } from './services/post.sandbox';
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { AppState } from '../store/models/app-state.model'
 import { Observable } from 'rxjs';
 import { Post } from '../store/models/post.model';
 import { Router } from '@angular/router';
